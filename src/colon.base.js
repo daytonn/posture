@@ -1,9 +1,6 @@
-var Colon = (function() {
-  function Colon() {
-    this.Models = {};
-    this.Collections = {};
-    this.Views = {};
-  }
-
-  return Colon;
-})();
+// Colon application object to namespace components
+var Colon = {
+  Models: {},
+  Collections: {},
+  Views: {}
+};

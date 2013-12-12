@@ -6,20 +6,22 @@
 
   <link rel="shortcut icon" type="image/png" href="components/jasmine/lib/jasmine-core/jasmine_favicon.png">
   <link rel="stylesheet" type="text/css" href="components/jasmine/lib/jasmine-core/jasmine.css">
-  <script type="text/javascript" src="components/jasmine/lib/jasmine-core/jasmine.js"></script>
-  <script type="text/javascript" src="components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+  <script src="components/jasmine/lib/jasmine-core/jasmine.js"></script>
+  <script src="components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
 
   <!-- include source files here... -->
-  <script type="text/javascript" src="src/colon.base.js"></script>
-  <script type="text/javascript" src="src/colon.model.js"></script>
+  <script src="components/underscore/underscore.js"></script>
+  <script src="components/backbone/backbone.js"></script>
+  <script src="src/colon.base.js"></script>
+  <script src="src/colon.model.js"></script>
 
-  <script type="text/javascript" src="specs/helpers/spec_helper.js"></script>
+  <script src="specs/helpers/spec_helper.js"></script>
 
   <!-- include spec files here... -->
-  <script type="text/javascript" src="specs/colon.base_spec.js"></script>
-  <script type="text/javascript" src="specs/models/colon.model_spec.js"></script>
+  <script src="specs/colon.base_spec.js"></script>
+  <script src="specs/models/colon.model_spec.js"></script>
 
-  <script type="text/javascript">
+  <script>
     (function() {
       var jasmineEnv = jasmine.getEnv();
       jasmineEnv.updateInterval = 1000;
