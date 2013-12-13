@@ -1,6 +1,8 @@
 var eventStub;
 var promiseStub;
 
+jasmine.getFixtures().fixturesPath = 'spec/fixtures';
+
 beforeEach(function() {
   eventStub = {
     preventDefault: jasmine.createSpy(),

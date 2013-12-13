@@ -9,17 +9,23 @@
   <script src="components/jasmine/lib/jasmine-core/jasmine.js"></script>
   <script src="components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
 
-  <!-- include source files here... -->
+  <!-- include dependency files here... -->
+  <script src="components/jquery/jquery.js"></script>
   <script src="components/underscore/underscore.js"></script>
   <script src="components/backbone/backbone.js"></script>
-  <script src="src/colon.base.js"></script>
-  <script src="src/colon.model.js"></script>
+  <script src="components/jasmine-jquery/lib/jasmine-jquery.js"></script>
+  <script src="components/sinonjs/sinon.js"></script>
 
-  <script src="specs/helpers/spec_helper.js"></script>
+  <!-- include source files here... -->
+  <script src="src/posture.base.js"></script>
+  <script src="src/posture.model.js"></script>
+  <script src="src/posture.tabs.js"></script>
+  <script src="spec/helpers/spec_helper.js"></script>
 
   <!-- include spec files here... -->
-  <script src="specs/colon.base_spec.js"></script>
-  <script src="specs/models/colon.model_spec.js"></script>
+  <script src="spec/posture.base_spec.js"></script>
+  <script src="spec/models/posture.model_spec.js"></script>
+  <script src="spec/views/posture.tabs_spec.js"></script>
 
   <script>
     (function() {
@@ -46,12 +52,9 @@
       function execJasmine() {
         jasmineEnv.execute();
       }
-
     })();
   </script>
-
 </head>
-
 <body>
 </body>
 </html>

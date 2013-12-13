@@ -13,7 +13,7 @@
     return suspect.constructor != constructor;
   }
 
-  Colon.Models.Model = Backbone.Model.extend({
+  Posture.Model = Backbone.Model.extend({
     //### constructor
     // force parsing all the time and call through
     // to native backbone constructor

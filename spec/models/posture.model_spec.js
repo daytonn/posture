@@ -1,12 +1,12 @@
-describe("Colon.Models.Model", function() {
+describe("Posture.Model", function() {
   var BaseModel;
   var ChildModel;
   var data;
   var subject;
 
   beforeEach(function() {
-    ChildModel = Colon.Models.Model.extend({});
-    BaseModel = Colon.Models.Model.extend({
+    ChildModel = Posture.Model.extend({});
+    BaseModel = Posture.Model.extend({
       wrappedAttributes: {
         first_child: ChildModel,
         second_child: ChildModel
