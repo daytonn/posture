@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/tabs.css">
+  <title>Posture Tabs</title>
+</head>
+<body>
+  <div id="example-tabs">
+    <div class="tabs">
+      <a class="tab" href="#p1">Tab 1</a>
+      <a class="tab" href="#p2">Tab 2</a>
+      <a class="tab" href="#p3">Tab 3</a>
+      <a class="tab" href="#p4">Tab 4</a>
+    </div>
+    <div class="panes">
+      <section class="pane" id="p1">
+        <p>First panel pane goes here...</p>
+        <p>Shown <span class="count">0</span> times</p>
+      </section>
+      <section class="pane" id="p2">
+        <p>Second panel pane goes here...</p>
+        <p>Shown <span class="count">0</span> times</p>
+      </section>
+      <section class="pane" id="p3">
+        <p>Third panel pane goes here...</p>
+        <p>Shown <span class="count">0</span> times</p>
+      </section>
+      <section class="pane" id="p4">
+        <p>Fourth panel content goes here...</p>
+        <p>Shown <span class="count">0</span> times</p>
+      </section>
+    </div>
+  </div>
+  <br />
+  <div id="example-tabs-active">
+    <div class="tabs">
+      <a class="tab" href="#pa1">Tab 1</a>
+      <a class="tab" href="#pa2">Tab 2</a>
+      <a class="tab active" href="#pa3">Tab 3</a>
+      <a class="tab" href="#pa4">Tab 4</a>
+    </div>
+    <div class="panes">
+      <section class="pane" id="pa1">
+        <p>First panel pane goes here...</p>
+        <p>The other corresponding tab was shown <span class="count">0</span> times</p>
+      </section>
+      <section class="pane" id="pa2">
+        <p>Second panel pane goes here...</p>
+        <p>The other corresponding tab was shown <span class="count">0</span> times</p>
+      </section>
+      <section class="pane" id="pa3">
+        <p>Third panel pane goes here...</p>
+        <p>The other corresponding tab was shown <span class="count">0</span> times</p>
+      </section>
+      <section class="pane" id="pa4">
+        <p>Fourth panel content goes here...</p>
+        <p>The other corresponding tab was shown <span class="count">0</span> times</p>
+      </section>
+    </div>
+  </div>
+  <script src="../components/jquery/jquery.js"></script>
+  <script src="../components/underscore/underscore.js"></script>
+  <script src="../components/backbone/backbone.js"></script>
+  <script src="../src/posture.base.js"></script>
+  <script src="../src/posture.model.js"></script>
+  <script src="../src/posture.tabs.js"></script>
+  <script>
+    var exampleTabs = new Posture.Tabs({ el: "#example-tabs" });
+    var exampleTabsActive = new Posture.Tabs({ el: "#example-tabs-active" });
+
+    exampleTabs.on("tab.activated", function(tab) {
+      var count = parseInt(tab.$pane.find(".count").text(), 10);
+      tab.$pane.find(".count").html(count += 1);
+      var otherPane = $(tab.$pane.attr("id").replace(/^p/, "#pa"));
+      var otherCount = parseInt(otherPane.find(".count").text(), 10);
+      otherPane.find(".count").html(otherCount += 1);
+    });
+  </script>
+</body>
+</html>
