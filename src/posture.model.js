@@ -1,11 +1,4 @@
 (function() {
-  //### isTypeof
-  // determine if the given constructor matches
-  // a certain type
-  function isTypeof(constructor, suspect) {
-    return suspect.constructor == constructor;
-  }
-
   //### isNotTypeof
   // determine if the given constructor does NOT
   // match a certain type
